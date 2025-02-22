@@ -19,8 +19,7 @@ class fifo_wr_rd_test extends fifo_test;
     phase.raise_objection(this);
     seq.start(env.agt.seqr);
     phase.drop_objection(this);
-    
-    //set a drain-time for the environment if desired
+
     phase.phase_done.set_drain_time(this, 50);
   endtask : run_phase
   
