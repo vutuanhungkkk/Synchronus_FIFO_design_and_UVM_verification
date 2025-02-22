@@ -4,20 +4,16 @@ class fifo_agent extends uvm_agent;
   fifo_monitor mon;
   
   //virtual fifo_interface vif;
-  
-  //Utility and Field macros
   `uvm_component_utils_begin(fifo_agent)
   `uvm_field_object(seqr, UVM_ALL_ON)
   `uvm_field_object(driv, UVM_ALL_ON)
   `uvm_field_object(mon, UVM_ALL_ON)
   `uvm_component_utils_end
-  
-  //Constructor
+
   function new(string name, uvm_component parent);
     super.new(name, parent);
   endfunction
-  
-  //Build phase
+
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     
